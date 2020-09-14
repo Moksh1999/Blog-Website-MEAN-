@@ -1,0 +1,90 @@
+<h1>Blog Arena</h1>
+
+<section class="user-authentication">
+    <div class="user_options-container">
+      <div class="user_options-text">
+        <div class="user_options-unregistered">
+          <h2 class="user_unregistered-title" style="font-size: 35px;">Don't have an account?</h2>
+          
+          <button class="user_unregistered-signup" id="signup-button" style="font-size: 20px;">Click Here</button>
+        </div>
+  
+        <div class="user_options-registered">
+          <h2 class="user_registered-title"  style="font-size: 35px;">Have an account?</h2>
+          <br>
+          <button class="user_registered-login" id="login-button" style="font-size: 20px;">Login</button>
+        </div>
+      </div>
+      
+      <div class="user_options-forms" id="user_options-forms">
+        <div class="user_forms-login">
+          <h2 class="forms_title">Login</h2>
+          <form class="forms_form" #loginForm = "ngForm">
+            <fieldset class="forms_fieldset">
+              <div class="forms_field">
+                <input type="email" name="email" style="font-size: 30px;" placeholder="Email" class="forms_field-input" 
+                [(ngModel)]="user2.email" [ngModelOptions]="{standalone: true}"required autofocus />
+              </div>
+              <div class="forms_field">
+                <input type="password" name="password" placeholder="Password" class="forms_field-input" 
+                [(ngModel)]="user2.password" [ngModelOptions]="{standalone: true}" required />
+              </div>
+            </fieldset>
+            <div class="forms_buttons">
+              <button type="button" class="forms_buttons-forgot" id="forget-button">Forgot password?</button>
+              <button type="submit" class="forms_buttons-action" (click) = "loginUser(loginForm)">Login</button>
+
+                          <a class="forms_buttons-mb-button" id="signup-button-mb">Sign up</a>
+            </div>
+            <div style="margin-left: 200px;color: red;" class="alert" *ngIf="error1">
+              {{error1}}
+            </div>
+          </form>
+        </div>
+        <div class="user_forms-signup">
+          <h2 class="forms_title">Sign Up</h2>
+          <form class="forms_form" #signupForm = "ngForm">
+            <fieldset class="forms_fieldset">
+              <div class="forms_field">
+
+                <input type="text" placeholder="Full Name" class="forms_field-input" 
+                [(ngModel)]="user.name" [ngModelOptions]="{standalone: true}" required />
+
+              </div>
+              <div class="forms_field">
+
+                <input type="email" placeholder="Email" class="forms_field-input"
+                [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" required  />
+
+              </div>
+              <div class="forms_field">
+
+                <input type="password" placeholder="Password" class="forms_field-input" 
+                [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}"
+                required />
+
+              </div>
+            </fieldset>
+            <div class="forms_buttons">
+              <button type="submit" class="forms_buttons-action" 
+              (click) = "signupUser(signupForm)">Sign up</button>
+                          <a class="forms_buttons-mb-button" id="login-button-mb">Login</a>
+            </div>
+          </form>
+        </div>
+              <div class="user_forms-forgot">
+          <h2 class="forms_title">Forgot Password</h2>
+          <form class="forms_form">
+            <fieldset class="forms_fieldset">
+              <div class="forms_field">
+                <input type="email" placeholder="Email" class="forms_field-input" required autofocus />
+              </div>
+            </fieldset>
+            <div class="forms_buttons">
+              <button type="submit" class="forms_buttons-action">Send reset link</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

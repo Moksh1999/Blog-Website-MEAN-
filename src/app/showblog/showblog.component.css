@@ -1,0 +1,160 @@
+
+  
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .navbar {
+    height: 65px;
+    box-shadow: 0 10px 50px hsl(0, 0%, 90%);
+  }
+  
+  .container {
+    max-width: 98%;
+    margin: 0 auto;
+  }
+  
+  .logo a {
+    float: left;
+    padding: 20px;
+    color: hsl(0, 0%, 40%);
+  }
+  
+  .menu {
+    float: right;
+  }
+  
+  .menu li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .menu li a {
+    padding: 20px 30px;
+    color: hsl(0, 0%, 60%);
+    float: left;
+    transition: color .3s ease-in-out;
+  }
+  
+  .menu li a:hover {
+    color: hsl(0, 0%, 30%);
+    transition: color .5s ease-in-out;
+  }
+
+
+  .divStyle {
+    background-color: #a0e7b5;
+    /* height: 400px;
+    width: 1500px; */
+    font-size: 25px;
+    padding-top: 40px;
+    /* margin-top: 30px; */
+    text-shadow: 0 0 10px white;
+    color: white;
+    border: 4px outset rgb(0, 0, 0);
+    border-radius:5%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 40px;
+    
+}
+.divStyle:hover{
+    /* height: 410px;
+    width: 1500px; */
+    background-color :#a0e7b5;
+    color: black;
+    text-shadow: 0 0 1px black;
+    transition: 0.5s;
+    /* border-radius:10%; */
+    padding-top: 50px;
+    border: 6px outset black;
+    border-radius: 0%;
+           opacity: 1;
+
+}
+    
+/* .button
+{
+    margin-left: 1100px;
+    margin-top: 160px;
+    margin-bottom: 50px;
+} */
+
+.content 
+{
+  margin-bottom: 60px;
+}
+
+button
+{
+    font-size: 15px;
+    /* width: 90px; */
+    /* height:35px; */
+    font-weight: bold;
+    background-color: #33ccff;
+    color: black;
+    outline: none;
+    border-radius: 8px;
+    border-color:#33ccff;
+    
+}
+
+
+
+
+.Title
+{
+  margin-left: 150px;
+  margin-top: 90px;
+  align-content: center;
+  color: royalblue;
+  font-size: xx-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-style: outset;
+  border-width: 5px;
+}
+
+.Content
+{
+  margin-left: 150px;
+  margin-top: 30px;
+  margin-right: 150px;
+  align-content: center;
+  color: black;
+  font-size: large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.NewComment
+{
+  margin-left: 30px;
+}
+
+.Comments
+{
+  margin-top: 30px;
+  margin-left: 150px;
+}
+
+.CommentStruct
+{
+  border-style: inset;
+}
+
+.comM
+{
+  border-radius: 10%;
+  color: crimson;
+  font-size: larger;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

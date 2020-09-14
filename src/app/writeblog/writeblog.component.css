@@ -1,0 +1,191 @@
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .navbar {
+    height: 65px;
+    box-shadow: 0 10px 50px hsl(0, 0%, 90%);
+  }
+  
+  .container {
+    max-width: 98%;
+    margin: 0 auto;
+  }
+  
+  .logo a {
+    float: left;
+    padding: 20px;
+    color: hsl(0, 0%, 40%);
+  }
+  
+  .menu {
+    float: right;
+  }
+  
+  .menu li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .menu li a {
+    padding: 20px 30px;
+    color: hsl(0, 0%, 60%);
+    float: left;
+    transition: color .3s ease-in-out;
+  }
+  
+  .menu li a:hover {
+    color: hsl(0, 0%, 30%);
+    transition: color .5s ease-in-out;
+  }
+
+
+
+.para
+{
+  font-size: 70px;
+  font-weight: bold;
+  color:blue;
+  text-align: center;
+  font-family: cursive;
+  text-decoration: solid;
+  text-shadow: black;
+}
+
+.title
+{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.title input 
+{
+  text-align: center;
+  font-size: 25px;
+  width: 500px;
+  height: 40px;
+  border-radius: 8px;
+  color:black;
+  border-color: darkblue;
+  outline: none;
+  
+  
+}
+input:focus {
+  background-color: lightblue;
+}
+
+
+
+.desc
+{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+textarea {
+  -webkit-tap-highlight-color: transparent;
+  margin-left: 410px;
+  width: 800px;
+  height: 500px;
+  min-height: 8rem;
+  padding: 1rem 1.5rem;
+  font-size: 20px;
+  line-height: 2rem;
+  font-weight: 300;
+  background:#d1e1fa;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  box-shadow: 
+    18px 18px 30px #D1D9E9, 
+    -18px -18px 30px #FFFFFF;
+  resize: vertical;
+  /* transition: ease .2s; */
+  cursor: pointer;
+}
+
+textarea::placeholder {
+  color: #9fa8da;
+}
+
+textarea:focus {
+  min-height: 12rem;
+  box-shadow: 
+    inset 18px 18px 30px #D1D9E9, 
+    inset -18px -18px 30px #FFFFFF;
+}
+
+/* Chrome/Opera/Safari */
+::-webkit-input-placeholder { 
+  color: transparent;
+}
+/* Firefox 19+ */
+::-moz-placeholder { 
+  color: transparent;
+}
+/* IE 10+ */
+:-ms-input-placeholder { 
+  color: transparent;
+}
+/* Firefox 18- */
+:-moz-placeholder { 
+  color: transparent;
+}
+
+textarea:placeholder-shown {
+  background: none;
+}
+button {
+  
+  border:.1em solid #900C3F;
+  padding:1em 2em;
+  font-size: 1.3em;
+  background:#222;
+  color:grey;
+  margin-left: 750px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.link8 {
+  position:relative;
+  overflow:hidden;
+   background:white;
+   transition:all .5s;
+  
+ }
+ 
+ .link8::before {
+   content:'Submit blog';
+   position:absolute;
+   top:0;
+   left:0;
+   background:#262626;
+   height:100%;
+   width:100%;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   transform:scale(5);
+   opacity:0;
+   transition:.5s;
+   color:white;
+ }
+ .link8:hover::before {
+   transform:scale(1);
+   opacity:1;
+ }

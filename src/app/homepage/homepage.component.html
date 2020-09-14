@@ -1,0 +1,65 @@
+<nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <h1><a href="#">Blog Arena</a></h1>
+      </div>
+      <ul class="menu">
+        <li (click)="toHome()"><a>Home</a></li>
+        <li (click)="toWrite()"><a>Write Blog</a></li>
+        <li (click)="toMyblogs()"><a>My Blogs</a></li>
+        <li (click)="logout()"><a>Logout</a></li>
+      </ul> 
+    </div>
+  </nav>
+
+
+<header class="hero" [ngStyle]="{'background-image': getUrl(), 'height' : '800px'}">
+    <div class="content">
+      <!-- <p><b>Conversation is king. Content is just something to talk about.</b></p> -->
+      
+      </div>
+  </header>
+  
+  <br>
+    <br>
+    <br>
+    <main class="main"> 
+      <section>
+        <div class="tab-row">
+          <div class="col-12">
+            <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: crimson;"><u>Description</u></h2>
+            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">In this guide, I’ll share with you all the available options and also give you suggestions 
+              based on the hands-on experience working with blogs for 
+              more than eight years. Also, our team has done several surveys and 
+              collected blogosphere stats to find the most popular blogging platforms on the web 
+              (free and paid) and I’ll tell you all about them in a while.
+  
+              Whether you want to blog as a hobby or to promote your business, finding the 
+              right tool is imperative for your blog’s success. Several blog sites offer a range of 
+              capabilities – and one is bound to suit your needs.</p>
+          </div>
+          </div>
+          <br>
+          <br>
+          <br>
+        </section>
+        <p style="margin-left: 650px; color:crimson; font-size: 70px; font-family:Verdana, Geneva, Tahoma, sans-serif;"><u>Latest Blogs</u></p>
+        
+        <div class="divStyle" *ngFor = "let blog of demos">
+            <div class="title" style="color : darkslateblue; font-weight: bold; margin-left: 45px; font-size: 55px; font-family: serif;">
+               <u> {{blog.title}} </u>
+                <!-- <hr> -->
+            </div>   
+            <br><br>
+            <div class="content" style="font-weight: bold; font-size: 22px;margin-left: 40px; margin-right: 30px; color:firebrick; font-family:monospace">
+              
+                <!-- <hr> -->
+                {{blog.content}}
+                 
+            </div>       
+            <button class="btn" [routerLink]="['/showblog',blog.id]">Read More</button>
+        </div>
+      </main>
+      <div>
+ 
+        {{msg}}

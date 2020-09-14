@@ -1,0 +1,45 @@
+<nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <h1><a href="#">Blog Arena</a></h1>
+      </div>
+      <ul class="menu">
+        <li (click)="toHome()"><a>Home</a></li>
+        <li (click)="toWrite()"><a>Write Blog</a></li>
+        <li (click)="toMyblogs()"><a>My Blogs</a></li>
+        <li (click)="logout()"><a>Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+ 
+      <div class="Title"><p>{{showingBlog?.title}}</p></div>
+      <div class="Content"><p>{{showingBlog?.content}}</p></div>
+      <div class="NewComment"></div>
+      <div class="Comments">
+        <div class="commentstruct">
+        <!-- CREATING COMMENT -->
+            <input class="comM" type="text" [(ngModel)]="newComment.content" [ngModelOptions]="{standalone: true}" style="width: 400px; height: 70px; margin-left: 20px; margin-bottom: 30px;">
+            <button style="width: 100px; margin-left: 10px; background-color: royalblue;" (click)="doComment()">Comment</button>
+          </div>
+
+          <!-- SHOWING COMMENTS -->
+          <span class="CommentStruct" style="font-size: 30px; color: royalblue;"><u>Comments on this blog : </u></span>
+          <div class="comm" *ngFor="let comment of comments" style="margin-left: 300px; margin-top: 20px; font-size: large;">
+              <span style="color: crimson;"><li (click)="comment.hideme = !comment.hideme">{{comment.content}}</li></span>
+
+              <!-- TOGGLE IF WANT TO REPLY -->
+              <div [hidden]="!comment.hideme">
+                  <div style="margin-left: 300px">
+                        <input type="text" [(ngModel)]="replycomment.content" style="height: 20px; width: 250px;"><button (click)="reply(comment._id)" style="width: 100px; margin-left: 10px; background-color: royalblue;">Reply</button>
+                      </div>
+                </div>
+              
+              <!-- SHOW REPLIES -->
+              <span style="color: crimson; margin-left: 80px;"*ngFor="let reply of comment.comments">
+                <span style="color:royalblue ;">Reply</span> : {{reply.content}}<br></span><hr style="height: 2px;">
+          </div>
+      </div>
+      

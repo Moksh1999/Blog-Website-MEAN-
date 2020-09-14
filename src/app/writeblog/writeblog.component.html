@@ -1,0 +1,48 @@
+<nav class="navbar">
+   <div class="container">
+     <div class="logo">
+       <h1><a href="#">Blog Arena</a></h1>
+     </div>
+ 
+     <ul class="menu">
+       <li (click)="toHome()"><a>Home</a></li>
+       <li (click)="toWrite()"><a>Write Blog</a></li>
+       <li (click)="toMyblogs()"><a>My Blogs</a></li>
+       <li (click)="logout()"><a>Logout</a></li>
+       <!-- <li><a href="#">Contact</a></li> -->
+     </ul>
+   </div>
+ </nav>
+<br>
+
+ 
+ <form  #blogForm="ngForm">
+ <div class="para">
+   Let's create a blog
+ </div>
+ <br>
+ 
+<div class="title">
+ Title: <br><br>
+ <input type="text" placeholder="Title of the project" 
+ [(ngModel)]="blog.title" [ngModelOptions]="{standalone: true}"required >
+</div>
+ 
+<br>
+   
+
+<div class="desc">
+  Description:</div>
+  <br>
+   <textarea name="message" rows="20" cols="65" placeholder="Write your blog here"
+   [(ngModel)]="blog.content" [ngModelOptions]="{standalone: true}"required >
+
+  </textarea>
+  <br>
+  <br>
+  <br>
+  <div class="alert" style="color: red; margin-left: 1000px;" *ngIf="error1">
+    {{error1}}
+  </div>
+  <button class="link8" (click)="blogAdd(blogForm)">Submit</button>
+  </form>
